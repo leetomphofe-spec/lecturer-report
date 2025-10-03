@@ -1,0 +1,114 @@
+/* ==============================
+   Loading Screen Styles
+============================== */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #e0e0e0;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================
+   Footer Styles
+============================== */
+.app-footer {
+  background: #212529; /* dark footer */
+  color: #f8f9fa;
+  padding: 3rem 1rem 1rem;
+  margin-top: 3rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4,
+.footer-section h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  margin: 0.3rem 0;
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.contact-info p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   Footer Bottom
+============================== */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.footer-social a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #adb5bd;
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}

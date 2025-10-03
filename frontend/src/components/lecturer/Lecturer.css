@@ -1,0 +1,165 @@
+/* Lecturer Dashboard Styles */
+.lecturer-dashboard {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.lecturer-navbar {
+  background: #2c3e50;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  border-radius: 1234px;
+}
+.lecturer-navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.lecturer-nav-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.8) !important;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.lecturer-nav-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.lecturer-nav-btn.active {
+  background-color: rgba(255,255,255,0.2);
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+}
+
+.lecturer-logout-btn {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.lecturer-logout-btn:hover {
+  background-color: rgba(255,255,255,0.3);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.navbar-text {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 500;
+}
+
+.lecturer-content-area {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  min-height: 600px;
+}
+
+.lecturer-dashboard-overview {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.lecturer-dashboard-header {
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.lecturer-dashboard-header h4 {
+  color: #495057;
+  margin: 0;
+  font-weight: 600;
+}
+
+.lecturer-dashboard-body ul {
+  padding-left: 20px;
+}
+
+.lecturer-dashboard-body li {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  color: #6c757d;
+}
+
+.card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lecturer-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lecturer-navbar .navbar-nav {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .lecturer-nav-btn {
+    display: block;
+    margin: 0.25rem 0;
+    text-align: left;
+  }
+  
+  .lecturer-content-area {
+    padding: 20px;
+    margin-top: 1rem;
+  }
+  
+  .navbar-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Mobile hamburger menu styles */
+@media (max-width: 991.98px) {
+  .lecturer-navbar .navbar-collapse {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+}
+
+/* Enhanced dashboard cards */
+.lecturer-dashboard-body .card {
+  border: none;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.lecturer-dashboard-body .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
