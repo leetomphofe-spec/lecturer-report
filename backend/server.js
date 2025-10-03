@@ -13,6 +13,12 @@ app.get('/api/test', (req, res) => {
   res.json({ message: 'Server is running successfully!' });
 });
 
+// Add this with other route imports
+const exportRoutes = require('./routes/export');
+
+// Add this with other route uses
+app.use('/api/export', exportRoutes);
+
 // Routes - IMPORTANT: Order matters!
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/guest', require('./routes/guest'));
@@ -68,7 +74,13 @@ app.use((err, req, res, next) => {
   });
 });
 
+
+
+
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
 
 app.listen(PORT, () => {
   console.log('=================================');

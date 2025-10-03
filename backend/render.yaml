@@ -1,0 +1,23 @@
+# render.yaml
+services:
+  - type: web
+    name: lecturer-reporting-backend
+    env: node
+    plan: free
+    region: oregon
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_yxjM6rlUT8KO@ep-blue-surf-ad9nh6al-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require
+      - key: JWT_SECRET
+        value: lecturer_reporting_system_secret_key_2024_very_secure
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: FRONTEND_URL
+        value: https://luct-reporting.netlify.app
+        
